@@ -1,0 +1,57 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f3f3;
+  direction: rtl;
+  text-align: center;
+  padding: 20px;
+}
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+.logo {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+input {
+  width: 90%;
+  padding: 8px;
+  margin: 8px 0;
+}
+button {
+  padding: 10px 20px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0b5ed7;
+}
+#result {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #198754;
+}
+.social-icons {
+  margin-top: 20px;
+}
+.social-icons a {
+  font-size: 28px;
+  margin: 0 10px;
+  color: #555;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  opacity: 0.8;
+}
+.social-icons .whatsapp { color: #25D366; }
+.social-icons .telegram { color: #0088cc; }
+.social-icons .snapchat { color: #FFFC00; }
+.social-icons .twitter { color: #1DA1F2; }

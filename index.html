@@ -1,90 +1,43 @@
-<img src="IMG_3452.png" alt="شعار سلمان الجنيدي" style="max-width: 120px; display: block; margin: auto;">
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>سلمان الجنيدي - حساب النسبة الموزونة</title>
-  <style>
-    body {
-      font-family: 'Tahoma', sans-serif;
-      background-color: #f0f4f8;
-      text-align: center;
-      padding: 30px;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    .calculator {
-      background: #fff;
-      padding: 25px;
-      margin: auto;
-      border-radius: 10px;
-      max-width: 400px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    input {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    button {
-      padding: 12px 20px;
-      font-size: 16px;
-      background-color: #2980b9;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #1c5980;
-    }
-    #result {
-      margin-top: 20px;
-      font-size: 20px;
-      color: #27ae60;
-      font-weight: bold;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-  <h1>سلمان الجنيدي - حساب النسبة الموزونة</h1>
-
-  <div class="calculator">
-    <label>نسبة الثانوية العامة (%)</label><br>
-    <input type="number" id="thanawya" placeholder="أدخل نسبة الثانوية"><br>
-
-    <label>درجة القدرات العامة (%)</label><br>
-    <input type="number" id="qodrat" placeholder="أدخل درجة القدرات"><br>
-
-    <label>درجة التحصيلي (%)</label><br>
-    <input type="number" id="tahsili" placeholder="أدخل درجة التحصيلي"><br>
-
-    <button onclick="calculate()">احسب النسبة</button>
-
+  <div class="container">
+    <img src="logo.png" alt="شعار سلمان الجنيدي" style="max-width: 120px; display: block; margin: auto;">
+    <h1>سلمان الجنيدي - حساب النسبة الموزونة</h1>
+    <div class="form-group">
+      <label>نسبة الثانوية العامة</label>
+      <input type="number" id="thanawya" placeholder="مثلاً 95">
+    </div>
+    <div class="form-group">
+      <label>درجة القدرات</label>
+      <input type="number" id="qodrat" placeholder="مثلاً 85">
+    </div>
+    <div class="form-group">
+      <label>درجة التحصيلي</label>
+      <input type="number" id="tahsili" placeholder="مثلاً 80">
+    </div>
+    <button onclick="calculate()">احسب</button>
     <div id="result"></div>
+
+    <hr style="margin: 30px 0;">
+
+    <div class="social-icons">
+      <a href="https://whatsapp.com/channel/0029VaCqwVa5a23uUuPkPG1K" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/salman_aljnidi" target="_blank" class="telegram"><i class="fab fa-telegram"></i></a>
+      <a href="https://snapchat.com/t/wwKNMVYH" target="_blank" class="snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+      <a href="https://x.com/salman_aljnidi?s=21&t=FyhxYqzejDTQnwHpeRcrIw" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+    </div>
   </div>
 
-  <script>
-    function calculate() {
-      let thanawya = parseFloat(document.getElementById('thanawya').value) || 0;
-      let qodrat = parseFloat(document.getElementById('qodrat').value) || 0;
-      let tahsili = parseFloat(document.getElementById('tahsili').value) || 0;
-
-      if (thanawya > 100 || qodrat > 100 || tahsili > 100) {
-        document.getElementById('result').innerText = "الدرجات يجب أن تكون من 100.";
-        return;
-      }
-
-      let weighted = (thanawya * 0.30) + (qodrat * 0.30) + (tahsili * 0.40);
-      document.getElementById('result').innerText = "النسبة الموزونة: " + weighted.toFixed(2) + "%";
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
