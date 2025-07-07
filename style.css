@@ -1,56 +1,77 @@
-
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #FFF8DC;
+  background-color: #FFF8DC; /* لون صفحات المصحف */
   direction: rtl;
   text-align: center;
   padding: 20px;
+  margin: 0;
 }
+
 .container {
   max-width: 500px;
   margin: auto;
-  background: #2c2c2c;
+  background: #2c2c2c; /* أسود خفيف */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px #ccc;
+  color: #fff; /* ضروري مع الخلفية الغامقة */
 }
+
 .logo {
   max-width: 100px;
   margin-bottom: 15px;
 }
+
 input {
   width: 90%;
   padding: 8px;
   margin: 8px 0;
+  background-color: #444; /* رمادي غامق */
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 4px;
 }
+
 button {
   padding: 10px 20px;
   background-color: #0d6efd;
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
+
 button:hover {
   background-color: #0b5ed7;
 }
+
+button:active {
+  background-color: #0a53be;
+}
+
 #result {
   margin-top: 15px;
   font-weight: bold;
   font-size: 1.2em;
-  color: #198754;
+  color: #4ade80; /* أخضر فاتح واضح على الغامق */
 }
+
 .social-icons {
   margin-top: 20px;
 }
+
 .social-icons a {
   font-size: 28px;
   margin: 0 10px;
-  color: #555;
+  color: #ccc;
   text-decoration: none;
+  transition: 0.3s;
 }
+
 .social-icons a:hover {
   opacity: 0.8;
 }
+
 .social-icons .whatsapp { color: #25D366; }
 .social-icons .telegram { color: #0088cc; }
 .social-icons .snapchat { color: #FFFC00; }
