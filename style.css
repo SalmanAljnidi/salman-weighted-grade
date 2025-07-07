@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #FFF8DC; /* لون صفحات المصحف */
+  background-color: #FFF8DC; /* خلفية صفحات المصحف */
   direction: rtl;
   text-align: center;
   padding: 20px;
@@ -10,11 +10,11 @@ body {
 .container {
   max-width: 500px;
   margin: auto;
-  background: #f2f2f2; /* رمادي فاتح */
+  background: #fefefe; /* أبيض لؤلؤي */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px #ccc;
-  color: #000; /* نخلي الخط أسود لأنه صار الخلفية فاتحة */
+  color: #000;
 }
 
 .logo {
@@ -26,9 +26,9 @@ input {
   width: 90%;
   padding: 8px;
   margin: 8px 0;
-  background-color: #444; /* رمادي غامق */
-  color: #fff;
-  border: 1px solid #666;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
 
@@ -53,7 +53,7 @@ button:active {
   margin-top: 15px;
   font-weight: bold;
   font-size: 1.2em;
-  color: #4ade80; /* أخضر فاتح واضح على الغامق */
+  color: #198754; /* أخضر مناسب */
 }
 
 .social-icons {
@@ -63,7 +63,7 @@ button:active {
 .social-icons a {
   font-size: 28px;
   margin: 0 10px;
-  color: #ccc;
+  color: #555;
   text-decoration: none;
   transition: 0.3s;
 }
