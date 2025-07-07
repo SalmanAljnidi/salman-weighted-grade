@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>سلمان الجنيدي - حساب النسبة الموزونة</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background-color: #f0f4f8;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .calculator {
+      background: #fff;
+      padding: 25px;
+      margin: auto;
+      border-radius: 10px;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1c5980;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #27ae60;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>سلمان الجنيدي - حساب النسبة الموزونة</h1>
+
+  <div class="calculator">
+    <label>نسبة الثانوية العامة (%)</label><br>
+    <input type="number" id="thanawya" placeholder="أدخل نسبة الثانوية"><br>
+
+    <label>درجة القدرات العامة (%)</label><br>
+    <input type="number" id="qodrat" placeholder="أدخل درجة القدرات"><br>
+
+    <label>درجة التحصيلي (%)</label><br>
+    <input type="number" id="tahsili" placeholder="أدخل درجة التحصيلي"><br>
+
+    <button onclick="calculate()">احسب النسبة</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculate() {
+      let thanawya = parseFloat(document.getElementById('thanawya').value) || 0;
+      let qodrat = parseFloat(document.getElementById('qodrat').value) || 0;
+      let tahsili = parseFloat(document.getElementById('tahsili').value) || 0;
+
+      if (thanawya > 100 || qodrat > 100 || tahsili > 100) {
+        document.getElementById('result').innerText = "الدرجات يجب أن تكون من 100.";
+        return;
+      }
+
+      let weighted = (thanawya * 0.30) + (qodrat * 0.30) + (tahsili * 0.40);
+      document.getElementById('result').innerText = "النسبة الموزونة: " + weighted.toFixed(2) + "%";
+    }
+  </script>
+
+</body>
+</html>
