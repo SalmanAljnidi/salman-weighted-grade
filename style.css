@@ -10,11 +10,11 @@ body {
 .container {
   max-width: 500px;
   margin: auto;
-  background: #2c2c2c; /* أسود خفيف */
+  background: #f2f2f2; /* رمادي فاتح */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px #ccc;
-  color: #fff; /* ضروري مع الخلفية الغامقة */
+  color: #000; /* نخلي الخط أسود لأنه صار الخلفية فاتحة */
 }
 
 .logo {
